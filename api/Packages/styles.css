@@ -1,0 +1,142 @@
+html, body {
+	height:100%;
+  width: 100%;
+}
+
+body {
+  background-color: #3b3e4c; /*#D5E1E2; 2F3241 */
+	color:#000;
+	padding:0;
+  margin:0;
+  font-family: 'Rubik', sans-serif;
+}
+a, p, ul, li {
+  padding:0;
+  margin:0;
+  list-style-type:none;
+}
+
+.bg-d1 {
+  background-color: #2F3241; 
+}
+.bg-d3 {
+  background-color: #3b3e4c; 
+}
+.bg-d2 {
+  background-color: #464956; 
+}
+
+.txt-c1 {
+  color:#a7b6c2;
+}
+
+textarea.transparent-input, input.transparent-input {
+   background-color:rgba(70,73,86,100) !important;
+   border:none !important;
+}
+
+.form-control {
+  color:#a7b6c2;
+}
+
+textarea.form-control:focus,
+input.form-check-input:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+/*input[type=checkbox]:focus,*/
+.uneditable-input:focus {   
+  /*border-color: rgba(247, 111 142, 0.8);*/
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(247, 111, 142, 0.6);
+  outline: 0 none;
+  color:#a7b6c2;
+}
+
+
+.p-small {
+  font-size:12px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+}
+.form-check label {
+    margin-left: 10px;
+    margin-top:5px;
+    font-weight: 500;
+}
+/*
+.form-check .form-check-input[type=checkbox] {
+    border-radius: .25em;
+    height: 35px;
+    width: 35px;
+    background-color:rgba(70,73,86,100) !important;
+    border:none !important;
+}
+.form-check .form-check-input[type=radio] {
+    border-radius: 100%;
+    height: 35px;
+    width: 35px;
+}
+*/
+.form-switch .form-check-input[type=checkbox] {
+    border-radius: 2em;
+    height: 30px;
+    width: 55px;
+    background-color:rgba(70,73,86,100) !important;
+    border:none !important;
+}
+.form-switch .form-check-input[type=checkbox]:checked {
+    background-color:rgba(30,255,188,100) !important;
+}
+
+.form-select {
+    background-color:rgba(30,255,188,100) !important;
+    border:none !important;
+}
+
+/*
+| EXPAND HELP LAYER
+|----------------------------------------------------------
+*/
+.goalcontainer {
+    width:100%;
+}
+.goalcontainer div {
+    width:100%;
+}
+.goalcontainer .helpheader {
+    padding: 2px;
+    cursor: pointer;
+}
+.goalcontainer .helpcontent {
+    display: none;
+    padding : 5px;
+}
+.li-butt {
+  cursor: pointer;
+}
+.li-butt-active {
+  border-right:8px solid #1EFFBC;
+  background-color: #464956; 
+}
+.hidegoal {
+  display: none;
+}
+
+
+
+
+
