@@ -1,8 +1,12 @@
-name: Partial Push Elsewhere
-run-name: ${{ github.actor }} Partial Push
+name: Partial Push Elsewhere # Based on https://github.com/orgs/community/discussions/53762
+env:
+  SOURCE_REPO: AntyAnti/openapideploy
+  DESTINATION_REPO: AntyAnti/openapireceive
+  AUTOMATIC_MONITOR: true
+run-name: ${{ github.actor }}'s Partial Push
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Partial-Push:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
