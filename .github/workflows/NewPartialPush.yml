@@ -25,4 +25,4 @@ jobs:
         repository: AntyAnti/openapireceive
         path: ./openapireceive
         token: ${{ secrets.OPENAPIDEPLOY_TOKEN }}
-    # make a copy the openapi file from Openapideploy project
+    # make a copy the openapi file from Openapideploy project.
