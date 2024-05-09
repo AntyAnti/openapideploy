@@ -16,14 +16,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: echo "Ohh my god this is ${{ github.event_name }} event."
-    # check out notehub project
+    # check out Openapideploy project
     - name: Check out Openapideploy project
       uses: actions/checkout@v3
     # check out Openapireceive project
-    - name: Check out Openapireceive JS project
+    - name: Check out Openapireceive project
       uses: actions/checkout@v3
       with:
-        repository: AntyAnti/openapireceive
+        repository: antyanti/openapireceive
         path: ./openapireceive
     # make a copy the openapi file from Openapideploy project.
     - name: Copy OpenAPI file
