@@ -12,6 +12,8 @@ on:
 jobs:
   copy_openapi_file_to_openapireceive:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - run: echo "Ohh my god this is ${{ github.event_name }} event."
     # check out Openapideploy project
