@@ -30,3 +30,8 @@ jobs:
       run: bash ./.github/scripts/copy-openapi-yaml.sh
       env:
         DESTINATION_PATH: ./openapireceive/
+    # make a branch in openapireceive repo and push the copy of the openapi file there
+    - name: Push to Openapireceive repo
+      run: bash ./.github/scripts/push-openapi.sh
+      env:
+        BRANCH: feat-openapi-update
