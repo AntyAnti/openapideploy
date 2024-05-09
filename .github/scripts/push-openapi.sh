@@ -8,7 +8,7 @@ function l { # Log a message to the terminal.
 }
 
 # move to the root the Openapireceive repo
-cd "./openapireceive"
+cd "./swagger"
 echo "Open root of Openapireceive repo"
 
 # check if there's already a currently existing feature branch in Openapireceive for this branch
