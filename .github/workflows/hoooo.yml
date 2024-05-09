@@ -21,8 +21,8 @@ jobs:
     - name: Check out Openapireceive project
       uses: actions/checkout@v3
       with:
-        repository: antyanti/openapireceive
-        path: ./openapireceive
+        repository: AntyAnti/openapireceive
+        path: ./swagger
     # make a copy the openapi file from Openapideploy project.
     - name: Copy OpenAPI file
       run: bash ./.github/scripts/copy-openapi-yaml.sh
