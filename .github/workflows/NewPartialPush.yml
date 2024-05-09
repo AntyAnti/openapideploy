@@ -1,12 +1,28 @@
-name: Partial Push Elsewhere # Based on https://github.com/orgs/community/discussions/53762
+name: Partial Push to Elsewhere # Based on https://github.com/orgs/community/discussions/53762
 env:
   SOURCE_REPO: AntyAnti/openapideploy
   DESTINATION_REPO: AntyAnti/openapireceive
+  FILES: "*.txt,LICENSE" # seperate multiple entries with ,
   AUTOMATIC_MONITOR: true
 run-name: ${{ github.actor }}'s Partial Push
-on: [push]
+on: 
+  push:
+    branches: 
+      - master
+    paths:
+      - 'api/Developers/openapi/openapi.yaml'
 jobs:
-  Partial-Push:
+  copy_openapi_file_to_openapireceive:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+    # check out notehub project
+    - name: Check out Openapideploy project
+      uses: actions/checkout@v3
+    # check out Openapireceive project
+    - name: Check out Openapireceive JS project
+      uses: actions/checkout@v3
+      with:
+        repository: AntyAnti/openapireceive
+        path: ./openapireceive
+        token: ${{ secrets.OPENAPIDEPLOY_TOKEN }}
+    # make a copy the openapi file from Openapideploy project
