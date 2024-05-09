@@ -15,6 +15,9 @@ OPENAPI_FILE=./openapideploy/api/Developers/openapi/openapi.yaml
 if [ -f "$OPENAPI_FILE" ]; then
     echo "Copying $OPENAPI_FILE"
     cp -R ./openapideploy/api/Developers/openapi/openapi.yaml $DESTINATION_PATH
+    echo "OpenAPI file copied to $DESTINATION_PATH"
+else
+    echo "Can't find $OPENAPI_FILE"
 fi
 
-echo "OpenAPI file copied to $DESTINATION_PATH"
+
