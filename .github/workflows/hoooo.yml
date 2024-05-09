@@ -34,4 +34,4 @@ jobs:
     - name: Push to Openapireceive repo
       run: bash ./.github/scripts/push-openapi.sh
       env:
-        BRANCH: featured
+        BRANCH: master
