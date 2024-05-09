@@ -23,6 +23,7 @@ jobs:
       with:
         repository: AntyAnti/openapireceive
         path: ./swagger
+        token: ${{ secrets.GITHUB_TOKEN }}
     # make a copy the openapi file from Openapideploy project.
     - name: Copy OpenAPI file
       run: bash ./.github/scripts/copy-openapi-yaml.sh
