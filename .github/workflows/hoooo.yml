@@ -26,6 +26,7 @@ jobs:
         repository: AntyAnti/openapireceive
         ref: 'main'
         path: ./swagger
+        persist-credentials: false
         token: ${{ secrets.TEST_KEY_FOR_RECEIVER }}
     # make a copy the openapi file from Openapideploy project.
     - name: Copy OpenAPI file
