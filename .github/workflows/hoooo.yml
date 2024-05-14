@@ -34,6 +34,6 @@ jobs:
         DESTINATION_PATH: ./swagger/
     # make a branch in openapireceive repo and push the copy of the openapi file there
     - name: Push to Openapireceive repo
-      run: bash ./.github/scripts/push-openapi.sh git@github.com:AntyAnti/openapideploy.git
+      run: bash ./.github/scripts/push-openapi.sh
       env:
         BRANCH: main
