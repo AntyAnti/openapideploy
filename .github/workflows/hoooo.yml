@@ -25,8 +25,6 @@ jobs:
       with:
         repository: AntyAnti/openapireceive
         ref: 'main'
-        ssh-strict: false
-        persist-credentials: true
         path: ./swagger
         token: ${{ secrets.TEST_KEY_FOR_RECEIVER }}
     # make a copy the openapi file from Openapideploy project.
@@ -36,6 +34,6 @@ jobs:
         DESTINATION_PATH: ./swagger/
     # make a branch in openapireceive repo and push the copy of the openapi file there
     - name: Push to Openapireceive repo
-      run: bash ./.github/scripts/push-openapi.sh
+      run: bash ./.github/scripts/push-openapi.sh git@github.com:AntyAnti/openapideploy.git
       env:
         BRANCH: main
