@@ -25,7 +25,7 @@ jobs:
       with:
         repository: AntyAnti/openapireceive
         ref: 'main'
-        path: ./swagger
+        path: ./swagger/openapi.yaml
         ssh-key: ${{ secrets.TEST_KEY_FOR_RECEIVER }}
     # make a copy the openapi file from Openapideploy project.
     - name: Copy OpenAPI file
