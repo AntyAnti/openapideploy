@@ -14,7 +14,7 @@ OPENAPI_FILE=./api/Developers/openapi/openapi.yaml
 # if the file exists in Openapideploy, copy it to Openapireceive repo
 if [ -f "$OPENAPI_FILE" ]; then
     echo "Copying $OPENAPI_FILE"
-    cp -R ./api/Developers/openapi/openapi.yaml $DESTINATION_PATH
+    cp -R ./api/Developers/openapi/openapi.yaml ./swagger/
     echo "OpenAPI file copied to $DESTINATION_PATH"
 else
     echo "Can't find $OPENAPI_FILE"
