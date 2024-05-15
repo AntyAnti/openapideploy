@@ -10,11 +10,12 @@ function l { # Log a message to the terminal.
 
 # File to copy from Openapideploy
 OPENAPI_FILE=./api/Developers/openapi/openapi.yaml
+DESTINATION_PATH =./swagger/
 
 # if the file exists in Openapideploy, copy it to Openapireceive repo
 if [ -f "$OPENAPI_FILE" ]; then
     echo "Copying $OPENAPI_FILE"
-    cp -R ./api/Developers/openapi/openapi.yaml ./swagger/
+    cp -R $OPENAPI_FILE $DESTINATION_PATH
     echo "OpenAPI file copied to $DESTINATION_PATH"
 else
     echo "Can't find $OPENAPI_FILE"
