@@ -18,13 +18,13 @@ jobs:
     - run: echo "Ohh my god this is ${{ github.event_name }} event."
     # check out Openapideploy project
     - name: Check out Openapideploy project
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     # check out Openapireceive project
     - name: Check out Openapireceive project
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: AntyAnti/openapireceive
-        ref: 'main-openapi'
+        ref: 'main'
         path: ./swagger/
         ssh-key: ${{ secrets.TEST_KEY_FOR_RECEIVER }}
     # make a copy the openapi file from Openapideploy project.
@@ -36,4 +36,4 @@ jobs:
     - name: Push to Openapireceive repo
       run: bash ./.github/scripts/push-openapi.sh
       env:
-        BRANCH: main
+        BRANCH: main-openapi
