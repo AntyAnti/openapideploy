@@ -31,7 +31,7 @@ jobs:
     - name: Copy OpenAPI file
       run: bash ./.github/scripts/copy-openapi-yaml.sh
       env:
-        DESTINATION_PATH: ./swagger/
+        DESTINATION_PATH: ./swagger/openapi.yaml
     # make a branch in openapireceive repo and push the copy of the openapi file there
     - name: Push to Openapireceive repo
       run: bash ./.github/scripts/push-openapi.sh
