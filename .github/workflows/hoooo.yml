@@ -24,7 +24,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: AntyAnti/openapireceive
-        ref: 'main'
+        ref: 'main-openapi'
         path: ./swagger/
         ssh-key: ${{ secrets.TEST_KEY_FOR_RECEIVER }}
     # make a copy the openapi file from Openapideploy project.
