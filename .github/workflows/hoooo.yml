@@ -16,10 +16,8 @@ jobs:
       contents: write
     steps:
     - run: echo "Ohh my god this is ${{ github.event_name }} event."
-    # check out Openapideploy project
     - name: Check out Openapideploy project
       uses: actions/checkout@v4
-    # check out Openapireceive project
     - name: Check out Openapireceive project
       uses: actions/checkout@v4
       with:
@@ -27,12 +25,24 @@ jobs:
         ref: main
         path: ./swagger
         ssh-key: ${{ secrets.TEST_KEY_FOR_RECEIVER }}
-    # make a copy the openapi file from Openapideploy project.
+        
     - name: Copy OpenAPI file
-      run: bash ./.github/scripts/copy-openapi-yaml.sh
+      shell: bash
       env:
-        DESTINATION_PATH: ./swagger/openapi.yaml
-    # make a branch in openapireceive repo and push the copy of the openapi file there
+        OPENAPI_FILE: ./api/Developers/openapi/openapi.yaml
+        DESTINATION_PATH: ./swagger/
+      run:
+        SCRIPT_NAME="$(basename "$0")"
+        SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+      
+        if [ -f "$OPENAPI_FILE" ]; then
+          echo "Copying $OPENAPI_FILE"
+          cp -R $OPENAPI_FILE $DESTINATION_PATH
+          echo "OpenAPI file copied to $DESTINATION_PATH"
+        else
+          echo "Can't find $OPENAPI_FILE"
+        fi
+
     - name: Push to Openapireceive repo
       run: bash ./.github/scripts/push-openapi.sh
       env:
