@@ -19,9 +19,9 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: AntyAnti/openapireceive
-        ref: manager
+        ref: manage
         fetch-depth: 0
-        path: swagger
+
         ssh-key: ${{ secrets.TEST_KEY_FOR_RECEIVER }}
         
     - name: Copy OpenAPI file
