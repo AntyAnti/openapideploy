@@ -18,7 +18,7 @@ jobs:
     - name: Check out Openapireceive project
       uses: actions/checkout@v4
       with:
-        repository: ahoptet/apitest
+        repository: shoptet/apitest
         ref: main
         path: swagger
         ssh-key: ${{ secrets.SSH_TEST }}
