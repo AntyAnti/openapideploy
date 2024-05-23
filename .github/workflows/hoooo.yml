@@ -22,7 +22,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: AntyAnti/openapireceive
-        ref: main
+        ref: manage
         path: swagger
         ssh-key: ${{ secrets.TEST_KEY_FOR_RECEIVER }}
         
