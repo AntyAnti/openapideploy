@@ -30,7 +30,7 @@ jobs:
       shell: bash
       env:
         OPENAPI_FILE: api/Developers/openapi/openapi.yaml
-        DESTINATION_PATH: swagger/
+        DESTINATION_PATH: swagger
       run: |
         SCRIPT_NAME="$(basename "$0")"
         SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
@@ -52,7 +52,7 @@ jobs:
         SCRIPT_NAME="$(basename "$0")"
         SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-        cd swagger/
+        cd swagger
 
         git ls-remote --exit-code --heads origin $BRANCH >/dev/null 2>&1
         EXIT_CODE=$?
