@@ -6,7 +6,7 @@ run-name: ${{ github.actor }}'s Partial Hoooo
 on: 
   push:
     branches: 
-      - master
+      - API-1270-git-copy-action
     paths:
       - 'api/Developers/openapi/openapi.yaml'
 jobs:
