@@ -18,11 +18,11 @@ jobs:
     - name: Check out Openapireceive project
       uses: actions/checkout@v4
       with:
-        repository: AntyAnti/openapireceive
-        ref: manage
+        repository: shoptet/apitest
+        ref: main
         fetch-depth: 0
         path: swagger
-        ssh-key: ${{ secrets.TEST_KEY_FOR_RECEIVER }}
+        ssh-key: ${{ secrets.NEW_SSH_OPENAPI }}
         
     - name: Copy OpenAPI file
       shell: bash
@@ -44,7 +44,7 @@ jobs:
     - name: Push to Openapireceive repo
       shell: bash
       env:
-        BRANCH: manage
+        BRANCH: main
         
       run: |
         SCRIPT_NAME="$(basename "$0")"
