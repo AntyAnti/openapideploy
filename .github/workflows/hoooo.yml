@@ -1,7 +1,4 @@
 name: Partial Push Hooo # Based on https://github.com/orgs/community/discussions/53762
-env:
-  SOURCE_REPO: AntyAnti/openapideploy
-  DESTINATION_REPO: AntyAnti/openapireceive
 run-name: ${{ github.actor }}'s Partial Hoooo
 on: 
   push:
@@ -23,7 +20,7 @@ jobs:
       with:
         repository: AntyAnti/openapireceive
         ref: manage
-        fetch-depth: 2
+        fetch-depth: 0
         path: swagger
         ssh-key: ${{ secrets.TEST_KEY_FOR_RECEIVER }}
         
