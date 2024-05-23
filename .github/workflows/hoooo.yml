@@ -23,7 +23,7 @@ jobs:
       with:
         repository: AntyAnti/openapireceive
         ref: manage
-        fetch-depth: 0
+        fetch-depth: 2
         path: swagger
         ssh-key: ${{ secrets.TEST_KEY_FOR_RECEIVER }}
         
