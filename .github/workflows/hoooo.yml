@@ -21,7 +21,7 @@ jobs:
         repository: AntyAnti/openapireceive
         ref: manage
         fetch-depth: 0
-
+        path: hooo
         ssh-key: ${{ secrets.TEST_KEY_FOR_RECEIVER }}
         
     - name: Copy OpenAPI file
