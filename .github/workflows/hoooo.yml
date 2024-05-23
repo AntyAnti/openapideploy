@@ -46,7 +46,7 @@ jobs:
     - name: Push to Openapireceive repo
       shell: bash
       env:
-        BRANCH: main
+        BRANCH: manage
         
       run: |
         SCRIPT_NAME="$(basename "$0")"
