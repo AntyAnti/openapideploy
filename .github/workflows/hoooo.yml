@@ -21,7 +21,7 @@ jobs:
         repository: AntyAnti/openapireceive
         ref: main
         path: swagger
-        ssh-key: ${{ secrets.SSH_TEST }}
+        ssh-key: ${{ secrets.TEST_KEY_FOR_RECEIVER }}
         
     - name: Copy OpenAPI file
       shell: bash
