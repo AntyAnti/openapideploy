@@ -46,7 +46,6 @@ jobs:
         BRANCH: main
         
       run: |
-        
         cd swagger/
 
         git ls-remote --exit-code --heads origin $BRANCH >/dev/null 2>&1
